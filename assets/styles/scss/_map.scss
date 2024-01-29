@@ -1,0 +1,137 @@
+.wrapper__map {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  @include media-laptop {
+    height: 752px;
+  }
+  @include media-tablet {
+    height: 752px;
+  }
+  @include media-mobile {
+    height: 550px;
+  }
+}
+
+.map {
+  background-color: $color_green;
+
+  &__googlemap {
+    @include media-laptop {
+      width: 1040px;
+      height: 480px;
+      margin-top: -120px;
+    }
+    @include media-tablet {
+      width: 696px;
+      height: 480px;
+      margin-top: -120px;
+    }
+    @include media-mobile {
+      width: 327px;
+      height: 327px;
+      margin-top: -95px;
+    }
+    background-color: $color_black;
+    background-image: url('../images/map.svg');
+    background-position: center;
+  }
+
+  &__title {
+    font-family: Gilroy-Bold;
+    @include media-laptop {
+      padding-top: 95px;
+      font-size: 4.8rem;
+      line-height: 48px;
+      width: 100%;
+    }
+    @include media-tablet {
+      padding-top: 95px;
+      font-size: 4.8rem;
+      line-height: 48px;
+      width: 100%;
+    }
+    @include media-mobile {
+      padding-top: 47px;
+      font-size: 3.6rem;
+      line-height: 36px;
+      width: 210px;
+    }
+    font-weight: 700;
+
+    p {
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    &-laptop {
+      @include media-laptop {
+        display: block;
+      }
+      @include media-tablet {
+        display: block;
+      }
+      @include media-mobile {
+        display: none;
+      }  
+    }
+
+    &-mobile {
+      @include media-laptop {
+        display: none;
+      }
+      @include media-tablet {
+        display: none;
+      }
+      @include media-mobile {
+        display: block;
+      }  
+    }
+
+  }
+
+  &__text {
+    padding-top: 24px;
+    padding-bottom: 37px;
+    line-height: 22px;
+    text-align: center;
+
+    &-laptop {
+      @include media-laptop {
+        display: block;
+      }
+      @include media-tablet {
+        display: block;
+      }
+      @include media-mobile {
+        display: none;
+      }  
+    }
+
+    &-mobile {
+      @include media-laptop {
+        display: none;
+      }
+      @include media-tablet {
+        display: none;
+      }
+      @include media-mobile {
+        display: block;
+      }  
+    }
+
+  }
+}
+
+.button__map {
+  width: 149px;
+  color: $color_white;
+  background: $color_black;
+}
+
+.button__map:hover {
+  background: $color_green;
+  color: $color_black;
+  border: 1px solid $color_black;
+}

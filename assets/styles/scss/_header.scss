@@ -1,0 +1,48 @@
+.wrapper__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 95px;
+}
+
+.header {
+  background: $color_black;
+  backdrop-filter: blur(12px);
+
+  &__logo {
+    font-family: 'Strasua';
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 1px;
+    text-align: left;
+    a {
+      color: $color_green;
+    }
+  }
+
+  &__menu {
+    &-list {
+      display: flex;
+      @include media-laptop {
+        gap: 50px;
+      }
+      @include media-tablet {
+        gap: 50px;
+      }
+      @include media-mobile {
+        gap: 34px;
+      }
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 16.8px;
+      a {
+        color: $color_white;
+        transition: all 0.2s;
+      }
+      a:hover {
+        color: $color_green;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+body {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #000000;
+  margin: 0px;
+  background-color: $color_black;
+}
+
+.wrapper {
+  margin: auto;
+  @include media-laptop {
+    max-width: 1040px;
+    //min-width: 1040px;
+  }
+  @include media-tablet {
+    min-width: unset;
+    max-width: unset;
+    width: calc(100% - 64px);
+  }
+  @include media-mobile {
+    max-width: 327px;
+    min-width: 327px;
+  }
+  &__header {
+    background-color: $color_black;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  border-radius: 48px;
+
+  &__arrow {
+    padding-right: 17px;
+    font-family: 'SF Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 19px;
+  }
+
+  &__text {
+    font-weight: 600;
+    padding-left: 18px;
+    white-space: nowrap;
+  }
+  transition: all 0.2s;
+}
+
+.nowrap {
+  white-space: nowrap;
+}

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script src="contact.js" type="module"></script>
+    <meta
+      name="viewport"
+      content="width=335, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>IMIKO - Contact Us</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="wrapper wrapper__header">
+        <div class="header__logo">
+          <a href="index.html">IMIKO</a>
+        </div>
+        <div class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-list-item">
+              <a href="index.html">Our Apps</a>
+            </li>
+            <li class="header__menu-list-item">
+              <a href="contact.html">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="contact-page">
+        <div class="wrapper wrapper__contact-page">
+          <div class="contact-page__contact">
+            <div class="contact-page__title">Contact us</div>
+            <div class="contact-page__details">
+              <div class="contact-page__details-item">
+                <div class="contact-page__text-24">Mail</div>
+                <div class="contact-page__text">
+                  <a class="contact-page__mail" href="mailto:info@imiko.ltd">info@imiko.ltd</a>
+                </div>
+              </div>
+              <div class="contact-page__details-item">
+                <div class="contact-page__text-24">Phone</div>
+                <div class="contact-page__text">
+                  <a class="contact-page__tel" href="tel:+441935717771">+44 1935 717771</a><br />
+                  <a class="contact-page__tel" href="tel:+441332323950">+44 1332 323950</a>
+                </div>
+              </div>
+              <div class="contact-page__details-item">
+                <div class="contact-page__text-24">Location</div>
+                <div class="contact-page__text contact-page__text-laptop">
+                  Bouboulina Building , Floor<br />3, Flat 31, 1 Boumpoulinas,<br />
+                  Nicosia, Cyprus 1060
+                </div>
+                <div class="contact-page__text contact-page__text-mobile">
+                  Bouboulina Building , Floor 3, Flat 31, 1 Boumpoulinas, Nicosia, Cyprus 1060
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-page__form">
+            <form id="feedbackForm" action="#">
+              <fieldset class="form__fields form__hide-success" style="border: none">
+                <div class="group">
+                  <input type="text" name="name" id="feedbackName" required="" />
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Name</label>
+                </div>
+
+                <div class="group">
+                  <input type="email" id="feedbackEmail" name="email" required="" />
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>E-mail</label>
+                </div>
+
+                <div class="">
+                  <div class="group">
+                    <input
+                      type="text"
+                      id="vacancy"
+                      name="vacancy"
+                      required
+                      onkeypress="return false;"
+                      autocomplete="off"
+                    />
+                    <div class="input-icon rotate">&#8963;</div>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Vacancy</label>
+                  </div>
+                  <details class="custom-select">
+                    <summary class="radios" id="vacancy-box">
+                      <input type="radio" name="vacancy-item" id="default" title="Vacancy" checked />
+                      <input type="radio" name="vacancy-item" id="item1" title="Project Manager" />
+                      <input type="radio" name="vacancy-item" id="item2" title="Product Manager" />
+                      <input type="radio" name="vacancy-item" id="item3" title="ASO Specialist" />
+                      <input type="radio" name="vacancy-item" id="item4" title="User Acquisition Specialist" />
+                      <input type="radio" name="vacancy-item" id="item5" title="Media Buyer" />
+                      <input type="radio" name="vacancy-item" id="item6" title="Data Analyst" />
+                      <input type="radio" name="vacancy-item" id="item7" title="iOS Developer" />
+                      <input type="radio" name="vacancy-item" id="item8" title="Android Developer" />
+                      <input type="radio" name="vacancy-item" id="item9" title="Back-end Developer" />
+                      <input type="radio" name="vacancy-item" id="item10" title="QA Engineer" />
+                      <input type="radio" name="vacancy-item" id="item11" title="UX/UI Designer" />
+                      <input type="radio" name="vacancy-item" id="item12" title="Motion Designer" />
+                      <input type="radio" name="vacancy-item" id="item13" title="Illustrator" />
+                    </summary>
+                    <ul class="list">
+                      <li>
+                        <label for="item1">Project Manager</label>
+                      </li>
+                      <li>
+                        <label for="item2">Product Manager</label>
+                      </li>
+                      <li>
+                        <label for="item3">ASO Specialist</label>
+                      </li>
+                      <li>
+                        <label for="item4">User Acquisition Specialist</label>
+                      </li>
+                      <li>
+                        <label for="item5">Media Buyer</label>
+                      </li>
+                      <li>
+                        <label for="item6">Data Analyst</label>
+                      </li>
+                      <li>
+                        <label for="item7">iOS Developer</label>
+                      </li>
+                      <li>
+                        <label for="item8">Android Developer</label>
+                      </li>
+                      <li>
+                        <label for="item9">Back-end Developer</label>
+                      </li>
+                      <li>
+                        <label for="item10">QA Engineer</label>
+                      </li>
+                      <li>
+                        <label for="item11">UX/UI Designer</label>
+                      </li>
+                      <li>
+                        <label for="item12">Motion Designer</label>
+                      </li>
+                      <li>
+                        <label for="item13">Illustrator</label>
+                      </li>
+                    </ul>
+                  </details>
+                </div>
+
+                <div class="group">
+                  <textarea rows="4" cols="50" name="comment" id="feedbackMess" required=""></textarea>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Message</label>
+                </div>
+                <input type="hidden" name="go" value="feedback" />
+
+                <button class="button button__contact" type="submit">
+                  <div class="button__text">Send</div>
+                  <div class="button__arrow">→</div>
+                </button>
+              </fieldset>
+            </form>
+
+            <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+            <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+            <script src="/forms/scripts.min.js"></script>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">Copyright © 2023&nbsp;<a href="">Imiko ltd.</a>&nbsp;All Right Reserved</footer>
+  </body>
+</html>

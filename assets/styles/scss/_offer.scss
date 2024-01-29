@@ -1,0 +1,117 @@
+.wrapper__offer {
+  display: flex;
+  justify-content: flex-start;
+  @include media-laptop {
+    flex-direction: row;
+    gap: 24px;
+    height: 643px;
+  }
+  @include media-tablet {
+    flex-direction: row;
+    gap: 24px;
+    height: 740px;
+  }
+  @include media-mobile {
+    flex-direction: column;
+    gap: 49px;
+    height: 896px;
+  }
+}
+
+.offer {
+  background: $color_white;
+
+  &__title {
+    @include media-laptop {
+      width: 508px;
+      font-size: 48px;
+      line-height: 48px;
+    }
+    @include media-tablet {
+      width: 336px;
+      font-size: 48px;
+      line-height: 48px;
+    }
+    @include media-mobile {
+      width: 327px;
+      font-size: 36px;
+      line-height: 36px;
+    }
+    font-family: Gilroy-Bold;
+    font-weight: 700;
+    letter-spacing: 0px;
+    text-align: left;
+
+    &-tablet {
+      @include media-laptop {
+        display: none;
+      }
+      @include media-tablet {
+        display: block;
+      }
+      @include media-mobile {
+        display: none;
+      }  
+    }
+
+    &-notablet {
+      @include media-laptop {
+        display: block;
+      }
+      @include media-tablet {
+        display: none;
+      }
+      @include media-mobile {
+        display: block;
+      }  
+    }
+  }
+
+  &__title-mobile {
+    @include media-laptop {
+      width: 508px;
+      font-size: 48px;
+      line-height: 48px;
+    }
+    @include media-tablet {
+      width: 336px;
+      font-size: 48px;
+      line-height: 48px;
+    }
+    @include media-mobile {
+      width: 327px;
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+
+  &__text {
+    @include media-laptop {
+      width: 498px;
+    }
+    @include media-tablet {
+      width: 336px;
+    }
+    @include media-mobile {
+      width: 327px;
+    }
+    padding-top: 23px;
+    line-height: 22px;
+  }
+
+  &__text-20 {
+    @include media-laptop {
+      width: 508px;
+    }
+    @include media-tablet {
+      width: 330px;
+    }
+    @include media-mobile {
+      width: 327px;
+    }
+    padding-top: 5px;
+    padding-bottom: 35px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+  height: 97px;
+  justify-content: center;
+  align-items: center;
+  background-color: $color_black;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.4rem;
+  line-height: 180%;
+  a {
+    color: $color_white;
+  }
+}

@@ -6,8 +6,6 @@
   "scripts": {
     "start": "npm-run-all --parallel dev watch:sass",
     "dev": "vite --host",
-    "build": "vite build",
-    "preview": "vite preview",
     "watch:sass": "node-sass assets/styles/scss/main.scss assets/styles/style.css -w",
     "compress:css": "node-sass assets/styles/style.css assets/styles/style.css --output-style compressed"
   },

@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "start": "npm-run-all --parallel dev watch:sass",
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
-    "watch:sass": "node-sass assets/styles/scss/main.scss build/styles/style.css -w"
+    "watch:sass": "node-sass assets/styles/scss/main.scss assets/styles/style.css -w",
+    "compress:css": "node-sass assets/styles/style.css assets/styles/style.css --output-style compressed"
   },
   "devDependencies": {
     "node-sass": "^9.0.0",
@@ -16,7 +17,5 @@
     "prettier": "^3.2.4",
     "vite": "^5.0.8"
   },
-  "dependencies": {
-    "keen-slider": "^6.8.6"
-  }
+  "dependencies": {}
 }

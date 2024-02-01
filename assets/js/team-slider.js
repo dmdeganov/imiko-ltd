@@ -1,5 +1,6 @@
-import KeenSlider from 'keen-slider';
-import 'keen-slider/keen-slider.min.css';
+// import KeenSlider from 'keen-slider';
+// import 'keen-slider/keen-slider.min.css';
+import {transpileMouseEventsForDrag, transpileTouchEventsForDrag} from './transpileEvents.js';
 
 let teamSliderTop;
 let teamSliderBottom;
@@ -59,48 +60,14 @@ function initializeTeamSliders() {
     },
     spacing: 24,
     created: () => {
-      teamSliderTop.container.addEventListener('mousedown', e => {
-        if (!e.isTrusted) return;
-        const event = new CustomEvent('mousedown', {detail: e});
-        teamSliderBottom.container.dispatchEvent(event);
-      });
-      teamSliderTop.container.addEventListener('mousemove', e => {
-        if (!e.isTrusted) return;
-        const event = new CustomEvent('mousemove', {detail: e});
-        teamSliderBottom.container.dispatchEvent(event);
-      });
-      teamSliderTop.container.addEventListener('mouseleave', e => {
-        if (!e.isTrusted) return;
-        const event = new CustomEvent('mouseleave', {detail: e});
-        teamSliderBottom.container.dispatchEvent(event);
-      });
-      teamSliderTop.container.addEventListener('mouseup', e => {
-        if (!e.isTrusted) return;
-        const event = new CustomEvent('mouseup', {detail: e});
-        teamSliderBottom.container.dispatchEvent(event);
-      });
+      setTimeout(() => {
+        transpileMouseEventsForDrag(teamSliderTop.container, teamSliderBottom.container);
+        // transpileTouchEventsForDrag(teamSliderTop.container, teamSliderBottom.container);
+      }, 100);
 
       setTimeout(() => {
-        teamSliderBottom.container.addEventListener('mousedown', e => {
-          if (!e.isTrusted) return;
-          const event = new CustomEvent('mousedown', {detail: e});
-          teamSliderTop.container.dispatchEvent(event);
-        });
-        teamSliderBottom.container.addEventListener('mousemove', e => {
-          if (!e.isTrusted) return;
-          const event = new CustomEvent('mousemove', {detail: e});
-          teamSliderTop.container.dispatchEvent(event);
-        });
-        teamSliderBottom.container.addEventListener('mouseleave', e => {
-          if (!e.isTrusted) return;
-          const event = new CustomEvent('mouseleave', {detail: e});
-          teamSliderTop.container.dispatchEvent(event);
-        });
-        teamSliderBottom.container.addEventListener('mouseup', e => {
-          if (!e.isTrusted) return;
-          const event = new CustomEvent('mouseup', {detail: e});
-          teamSliderTop.container.dispatchEvent(event);
-        });
+        transpileMouseEventsForDrag(teamSliderBottom.container, teamSliderTop.container);
+        // transpileTouchEventsForDrag(teamSliderBottom.container, teamSliderTop.container);
       }, 200);
     },
   });
@@ -113,5 +80,3 @@ function initializeTeamSliders() {
   slidersMounted = true;
 }
 initializeTeamSliders();
-
-// appSliderBottom.container.addEventListener('mousemove', console.log);

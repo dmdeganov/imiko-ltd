@@ -1,5 +1,6 @@
-import KeenSlider from 'keen-slider';
-import 'keen-slider/keen-slider.min.css';
+// import KeenSlider from 'keen-slider';
+// import 'keen-slider/keen-slider.min.css';
+import {transpileMouseEventsForDrag, transpileTouchEventsForDrag} from './transpileEvents.js';
 
 let appsSliderTop;
 let appSliderBottom;
@@ -48,49 +49,14 @@ const initializeAppSliders = () => {
     },
     spacing: 24,
     created: () => {
-      appsSliderTop.container.addEventListener('mousedown', e => {
-        if (!e.isTrusted) return;
-        const event = new CustomEvent('mousedown', {detail: e});
-        appSliderBottom.container.dispatchEvent(event);
-      });
-      appsSliderTop.container.addEventListener('mousemove', e => {
-        if (!e.isTrusted) return;
-        const event = new CustomEvent('mousemove', {detail: e});
-        appSliderBottom.container.dispatchEvent(event);
-      });
-      appsSliderTop.container.addEventListener('mouseleave', e => {
-        if (!e.isTrusted) return;
-        const event = new CustomEvent('mouseleave', {detail: e});
-        appSliderBottom.container.dispatchEvent(event);
-      });
-      appsSliderTop.container.addEventListener('mouseup', e => {
-        if (!e.isTrusted) return;
-        const event = new CustomEvent('mouseup', {detail: e});
-        appSliderBottom.container.dispatchEvent(event);
-      });
+      setTimeout(() => {
+        transpileMouseEventsForDrag(appsSliderTop.container, appSliderBottom.container);
+        transpileTouchEventsForDrag(appsSliderTop.container, appSliderBottom.container);
+      }, 100);
 
       setTimeout(() => {
-        appSliderBottom.container.addEventListener('mousedown', e => {
-          console.log(e.isTrusted);
-          if (!e.isTrusted) return;
-          const event = new CustomEvent('mousedown', {detail: e});
-          appsSliderTop.container.dispatchEvent(event);
-        });
-        appSliderBottom.container.addEventListener('mousemove', e => {
-          if (!e.isTrusted) return;
-          const event = new CustomEvent('mousemove', {detail: e});
-          appsSliderTop.container.dispatchEvent(event);
-        });
-        appSliderBottom.container.addEventListener('mouseleave', e => {
-          if (!e.isTrusted) return;
-          const event = new CustomEvent('mouseleave', {detail: e});
-          appsSliderTop.container.dispatchEvent(event);
-        });
-        appSliderBottom.container.addEventListener('mouseup', e => {
-          if (!e.isTrusted) return;
-          const event = new CustomEvent('mouseup', {detail: e});
-          appsSliderTop.container.dispatchEvent(event);
-        });
+        transpileMouseEventsForDrag(appSliderBottom.container, appsSliderTop.container);
+        transpileTouchEventsForDrag(appSliderBottom.container, appsSliderTop.container);
       }, 200);
 
       leftButton.addEventListener('click', () => {

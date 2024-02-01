@@ -1,25 +1,28 @@
 .wrapper__offer {
   display: flex;
   justify-content: flex-start;
+  padding: 160px 0;
   @include media-laptop {
     flex-direction: row;
     gap: 24px;
-    height: 643px;
   }
+
   @include media-tablet {
+    & > div{
+      flex-grow: 1;
+    }
+    padding: 120px 0;
     flex-direction: row;
     gap: 24px;
-    height: 740px;
   }
   @include media-mobile {
     flex-direction: column;
-    gap: 49px;
-    height: 896px;
+    gap: 48px;
   }
 }
 
 .offer {
-  background: $color_white;
+  background: $on-surface;
 
   &__title {
     @include media-laptop {
@@ -28,12 +31,10 @@
       line-height: 48px;
     }
     @include media-tablet {
-      width: 336px;
       font-size: 48px;
       line-height: 48px;
     }
     @include media-mobile {
-      width: 327px;
       font-size: 36px;
       line-height: 36px;
     }
@@ -51,7 +52,7 @@
       }
       @include media-mobile {
         display: none;
-      }  
+      }
     }
 
     &-notablet {
@@ -63,38 +64,16 @@
       }
       @include media-mobile {
         display: block;
-      }  
+      }
     }
   }
 
   &__title-mobile {
-    @include media-laptop {
-      width: 508px;
-      font-size: 48px;
-      line-height: 48px;
-    }
-    @include media-tablet {
-      width: 336px;
-      font-size: 48px;
-      line-height: 48px;
-    }
-    @include media-mobile {
-      width: 327px;
-      font-size: 48px;
-      line-height: 48px;
-    }
+    font-size: 48px;
+    line-height: 48px;
   }
 
   &__text {
-    @include media-laptop {
-      width: 498px;
-    }
-    @include media-tablet {
-      width: 336px;
-    }
-    @include media-mobile {
-      width: 327px;
-    }
     padding-top: 23px;
     line-height: 22px;
   }
@@ -103,12 +82,7 @@
     @include media-laptop {
       width: 508px;
     }
-    @include media-tablet {
-      width: 330px;
-    }
-    @include media-mobile {
-      width: 327px;
-    }
+
     padding-top: 5px;
     padding-bottom: 35px;
     font-size: 20px;

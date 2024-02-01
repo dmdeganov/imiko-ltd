@@ -1,0 +1,36 @@
+.slider-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+
+  &-left {
+    width: 36px;
+    height: 36px;
+    background-image: url('../images/arrow-right.svg');
+    transform: scale(-1, 1);
+  }
+
+  &-left-disabled {
+    background-image: url('../images/arrow-left-disabled.svg');
+  }
+
+  &-left:hover {
+    background-image: url('../images/arrow-right-hover.svg');
+    transform: scale(-1, 1);
+  }
+
+  &-right {
+    width: 36px;
+    height: 36px;
+    background-image: url('../images/arrow-right.svg');
+  }
+
+  &-right-disabled {
+    background-image: url('../images/arrow-left-disabled.svg');
+    transform: scale(-1, 1);
+  }
+
+  &-right:hover {
+    background-image: url('../images/arrow-right-hover.svg');
+  }
+}

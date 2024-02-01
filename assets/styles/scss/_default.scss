@@ -16,12 +16,12 @@ body {
   @include media-tablet {
     min-width: unset;
     max-width: unset;
-    width: calc(100% - 64px);
+    width: calc(100% - 48px);
   }
   @include media-mobile {
-    max-width: 327px;
-    min-width: 327px;
+    width: calc(100% - 40px);
   }
+
   &__header {
     background-color: $color_black;
   }

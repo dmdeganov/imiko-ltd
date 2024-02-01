@@ -1,0 +1,98 @@
+.app-screen {
+  transition: all 0.2s;
+  display: flex;
+  gap: 32px;
+  overflow: hidden;
+  height: 286px;
+  padding: 0 32px;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px 0;
+  }
+
+  &__icon {
+    width: 69px;
+    height: 69px;
+    img {
+      width: 69px;
+      height: 69px;
+    }
+  }
+
+  &:hover {
+    background-color: $color_green;
+    p {
+      color: $color_black;
+    }
+  }
+  &__right {
+    flex-grow: 1;
+  }
+  &__left {
+    row-gap: 16px;
+  }
+  &__shots {
+    width: 100%;
+  }
+  &__title {
+    font-family: Gilroy-Bold;
+    color: $color_green;
+    white-space: nowrap;
+    font-size: 2.4rem;
+    line-height: 24px;
+    .ios-only {
+      font-size: 32px;
+    }
+    @media only screen and (max-width: 640px) {
+    }
+  }
+
+  @include media-mobile {
+    height: auto;
+    max-height: 286px;
+    width: 100%;
+    padding: 0 20px;
+    justify-content: space-between;
+    &__title {
+      font-size: 16px;
+      line-height: 1;
+    }
+    &__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 112px;
+      padding: 18px 0;
+    }
+    &__right {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__shots {
+      max-height: 100%;
+      width: unset;
+    }
+    &__icon {
+      width: 44px;
+      height: 44px;
+      img {
+        width: 44px;
+        height: 44px;
+      }
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    &__shots {
+      height: unset;
+      max-width: 100%;
+    }
+  }
+  @media only screen and (max-width: 420px) {
+    padding: 0 16px;
+    gap: 16px;
+  }
+  background-color: $color_black;
+}

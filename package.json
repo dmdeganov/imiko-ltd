@@ -8,14 +8,15 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "watch:sass": "node-sass assets/styles/scss/main.scss assets/styles/style.css -w"
+    "watch:sass": "node-sass assets/styles/scss/main.scss build/styles/style.css -w"
   },
   "devDependencies": {
     "node-sass": "^9.0.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.2.4",
-    "sass": "^1.70.0",
     "vite": "^5.0.8"
   },
-  "dependencies": {}
+  "dependencies": {
+    "keen-slider": "^6.8.6"
+  }
 }

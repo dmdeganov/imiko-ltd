@@ -1,278 +1,22 @@
-.wrapper__apps {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow-x: hidden;
-  @include media-laptop {
-    height: 794px;
-  }
-  @include media-tablet {
-    height: 739px;
-  }
-  @include media-mobile {
-    height: 1406px;
-  }
-}
-
-.slider__padding {
-  margin-top: 30px;
-  @include media-laptop {
-    padding-top: 63px !important;
-    z-index: 1;
-  }
-  @include media-tablet {
-    padding-top: 1px !important;
-    z-index: 1;
-  }
-  @include media-mobile {
-    padding-top: 22px !important;
-    z-index: -1 !important;
-  }
-}
-
 .apps {
-  background: $color_white;
-
-  &__slider {
-    display: flex;
-    @include media-laptop {
-      flex-direction: row;
-      gap: 24px;
-    }
-    @include media-tablet {
-      flex-direction: row;
-      gap: 24px;
-    }
-    @include media-mobile {
-      flex-direction: column;
-      gap: 84px;
-    }
-  }
-
-  &__slider-item {
-    border: 1px solid deeppink;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    @include media-laptop {
-      width: 1040px;
-      height: 508px;
-    }
-    @include media-tablet {
-      width: 1040px;
-      height: 508px;
-    }
-    @include media-mobile {
-      width: 327px;
-      height: auto;
-    }
-    flex-wrap: wrap;
-    margin-top: -36px;
-    column-gap: 24px;
-  }
-
-  &__lower {
-    @include media-laptop {
-      margin-top: 28px;
-    }
-    @include media-tablet {
-      margin-top: 28px;
-    }
-    @include media-mobile {
-      margin-top: -36px;
-    }
-  }
-
+  background: $on-surface;
   &__item {
     display: flex;
     flex-direction: column;
-    @include media-laptop {
-      width: 508px;
-    }
-    @include media-tablet {
-      width: unset;
-    }
-    @include media-mobile {
-      width: 327px;
-    }
   }
-
-  &__item__screen {
-    transition: all 0.2s;
-    display: flex;
-    &:hover {
-      background-color: $color_green;
-      p {
-        color: $color_black;
-      }
-    }
+  &__logo {
     @include media-laptop {
-      width: 508px;
-      height: 286px;
-      padding: 0 32px;
-
-      &-left {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 168px;
-        padding: 32px 0;
-      }
-
-      &-right {
-        width: 276px;
-      }
-
-      &-icon {
-        width: 69px;
-        height: 69px;
-        img {
-          width: 69px;
-          height: 69px;
-        }
-      }
-
-      &-title {
-        font-family: Gilroy-Bold;
-        color: $color_green;
-        font-size: 2.4rem;
-        line-height: 24px;
-        white-space: nowrap;
-      }
-
-      &-frontimg {
-        width: 199px;
-        height: 254px;
-        background-position: center bottom;
-        background-size: contain;
-        background-repeat: no-repeat;
-        position: relative;
-        top: -222px;
-        left: 77px;
-        z-index: 1;
-      }
-
-      &-backimg {
-        width: 169px;
-        height: 254px;
-        position: relative;
-        top: 0px;
-        left: 0px;
-      }
+      width: 69px;
+      height: 69px;
     }
-
     @include media-tablet {
-      width: 100%;
-      height: 291px;
-      padding: 0 32px;
-
-      &-left {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 168px;
-        padding: 32px 0;
-      }
-
-      &-right {
-        width: 276px;
-      }
-
-      &-icon {
-        width: 69px;
-        height: 69px;
-        img {
-          width: 69px;
-          height: 69px;
-        }
-      }
-
-      &-title {
-        font-family: Gilroy-Bold;
-        color: $color_green;
-        font-size: 2.4rem;
-        line-height: 24px;
-        white-space: nowrap;
-      }
-
-      &-frontimg {
-        width: 199px;
-        height: 254px;
-        background-position: center bottom;
-        background-size: contain;
-        background-repeat: no-repeat;
-        position: relative;
-        top: -222px;
-        left: 77px;
-        z-index: 1;
-      }
-
-      &-backimg {
-        width: 169px;
-        height: 254px;
-        position: relative;
-        top: 0px;
-        left: 0px;
-      }
+      width: 69px;
+      height: 69px;
     }
-
     @include media-mobile {
-      width: 327px;
-      height: 184px;
-      padding: 0 20px;
-
-      &-left {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 112px;
-        padding: 18px 0;
-      }
-
-      &-right {
-        width: 107px;
-      }
-
-      &-icon {
-        width: 44px;
-        height: 44px;
-        img {
-          width: 44px;
-          height: 44px;
-        }
-      }
-
-      &-title {
-        font-family: Gilroy-Bold;
-        color: $color_green;
-        font-size: 1.6rem;
-        line-height: 16px;
-        white-space: nowrap;
-      }
-
-      &-frontimg {
-        width: 126px;
-        height: 254px;
-        background-position: center bottom;
-        background-size: contain;
-        background-repeat: no-repeat;
-        position: relative;
-        top: -234px;
-        left: 50px;
-        z-index: 1;
-      }
-
-      &-backimg {
-        width: 107px;
-        height: 161px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        position: relative;
-        top: 0px;
-        left: 0px;
-      }
+      width: 44px;
+      height: 44px;
     }
-    background-color: $color_black;
   }
 
   &__title {
@@ -300,17 +44,20 @@
   }
 
   &__buttons {
-    @include media-laptop {
-      padding-top: 36px;
-    }
-    @include media-tablet {
-      padding-top: 36px;
-    }
+    display: flex;
+    gap: 24px;
+    padding-top: 36px;
+    transform-origin: left;
+
     @include media-mobile {
       padding-top: 24px;
     }
-    display: flex;
-    gap: 24px;
+    @media only screen and (max-width: 385px) {
+      scale: 0.85;
+    }
+    @media only screen and (max-width: 340px) {
+      scale: 0.8;
+    }
   }
 }
 
@@ -318,13 +65,14 @@
   @include media-laptop {
     width: 162px;
   }
+
   @include media-tablet {
     width: 156px;
   }
   @include media-mobile {
     width: 152px;
   }
-  background: $color_white;
+  background: $on-surface;
   border: 1px solid $color_black;
   z-index: 1;
 }
@@ -333,93 +81,4 @@
   background: $color_green;
   color: $color_black;
   border: 1px solid $color_green;
-}
-
-#screen1 {
-  @include media-laptop {
-    width: 508px;
-  }
-  @include media-tablet {
-    width: 508px;
-  }
-  @include media-mobile {
-    width: 327px;
-  }
-}
-
-#screen2 {
-  @include media-laptop {
-    width: 508px;
-  }
-  @include media-tablet {
-    width: 508px;
-  }
-  @include media-mobile {
-    width: 327px;
-  }
-}
-
-#screen3 {
-  @include media-laptop {
-    width: 508px;
-  }
-  @include media-tablet {
-    width: 508px;
-  }
-  @include media-mobile {
-    width: 327px;
-  }
-}
-
-.app-screen {
-  @include media-laptop {
-    width: 69px;
-    height: 69px;
-  }
-  @include media-tablet {
-    width: 69px;
-    height: 69px;
-  }
-  @include media-mobile {
-    width: 44px;
-    height: 44px;
-  }
-}
-
-.frontimg1 {
-  background-image: url('../images/hd/app-hd-top.png');
-}
-
-.backimg1 {
-  background-image: url('../images/hd/app-hd-bottom.png');
-}
-
-.frontimg2 {
-  background-image: url('../images/pdf/app-pdf-top.png');
-}
-
-.backimg2 {
-  background-image: url('../images/pdf/app-pdf-bottom.png');
-}
-
-.frontimg3 {
-  background-image: url('../images/fax/app-fax-top.png');
-}
-
-.backimg3 {
-  background-image: url('../images/fax/app-fax-bottom.png');
-}
-.frontimg4 {
-  background-image: url('../images/moon/app-moon-top.png');
-}
-
-.backimg4 {
-  background-image: url('../images/moon/app-moon-bottom.png');
-}
-.frontimg5 {
-  background-image: url('../images/keyboard/app-keyboard-top.png');
-}
-
-.backimg5 {
-  background-image: url('../images/keyboard/app-keyboard-bottom.png');
 }

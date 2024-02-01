@@ -3,11 +3,11 @@
 @import './reset';
 @import './default';
 @import './normalize.scss';
-@import './slick.scss';
 @import './header';
 @import './way';
 @import './experience';
 @import './apps';
+@import './apps-sliders-composition';
 @import './offer';
 @import './world';
 @import './team';
@@ -15,4 +15,7 @@
 @import './map';
 @import './footer';
 @import './contact.page';
-
+@import './slider-toolbar';
+@import './app-screen';
+@import "./br";
+@import "team-sliders-composition";

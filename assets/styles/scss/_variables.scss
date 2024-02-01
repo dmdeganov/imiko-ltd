@@ -1,19 +1,26 @@
-$color_green: #E3FD52;
+$color_green: #e3fd52;
 $color_black: #111111;
-$color_white: #FFFFFF;
+$on-surface: #ffffff;
+$on-surface-70: rgba(255, 255, 255, 0.7);
 
 $content-width: 1080px;
 $tablet-content-width: 1079px;
-$mobile-content-width: 743px;
+$mobile-content-width: 640px;
 
 @mixin media-laptop {
-  @media (min-width: $content-width) { @content; }
+  @media (min-width: $content-width) {
+    @content;
+  }
 }
 
 @mixin media-tablet {
-  @media (max-width: $tablet-content-width) { @content; }
+  @media (max-width: $tablet-content-width) {
+    @content;
+  }
 }
 
 @mixin media-mobile {
-  @media (max-width: $mobile-content-width) { @content; }
+  @media (max-width: $mobile-content-width) {
+    @content;
+  }
 }

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="stylesheet" href="./build/styles/style.css" />
     <script src="contact.js" type="module"></script>
     <meta
       name="viewport"
@@ -11,7 +11,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>IMIKO - Contact Us</title>
   </head>
-
   <body>
     <header class="header">
       <div class="wrapper wrapper__header">
@@ -71,13 +70,15 @@
                   <span class="highlight"></span>
                   <span class="bar"></span>
                   <label>Name</label>
+                  <div class="check-icon"></div>
                 </div>
 
                 <div class="group">
-                  <input type="email" id="feedbackEmail" name="email" required="" />
+                  <input type="email" id="feedbackEmail" name="email" required="" placeholder=" "/>
                   <span class="highlight"></span>
                   <span class="bar"></span>
                   <label>E-mail</label>
+                  <div class="check-icon"></div>
                 </div>
 
                 <div class="">
@@ -87,10 +88,9 @@
                       id="vacancy"
                       name="vacancy"
                       required
-                      onkeypress="return false;"
-                      autocomplete="off"
+                      autocomplete="new-password"
                     />
-                    <div class="input-icon rotate">&#8963;</div>
+                    <div class="input-icon rotate"></div>
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label>Vacancy</label>
@@ -112,7 +112,7 @@
                       <input type="radio" name="vacancy-item" id="item12" title="Motion Designer" />
                       <input type="radio" name="vacancy-item" id="item13" title="Illustrator" />
                     </summary>
-                    <ul class="list">
+                    <ul class="list" id="vacancy-list">
                       <li>
                         <label for="item1">Project Manager</label>
                       </li>
@@ -161,6 +161,7 @@
                   <span class="highlight"></span>
                   <span class="bar"></span>
                   <label>Message</label>
+                  <div class="check-icon"></div>
                 </div>
                 <input type="hidden" name="go" value="feedback" />
 
@@ -170,11 +171,6 @@
                 </button>
               </fieldset>
             </form>
-
-            <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-            <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
-            <script src="/forms/scripts.min.js"></script>
           </div>
         </div>
       </div>

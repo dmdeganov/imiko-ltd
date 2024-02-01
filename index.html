@@ -1,19 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="./assets/styles/style.css" />
-
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./assets/styles/slick.css" />
-    <script type="text/javascript" src="./assets/js/slick.js"></script>
-
+    <link rel="stylesheet" href="./build/styles/style.css" />
     <meta
       name="viewport"
       content="width=335, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
     />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <title>IMIKO</title>
   </head>
 
@@ -39,7 +34,6 @@
     <main class="main">
       <div class="way">
         <div class="wrapper wrapper__way">
-          <div class="way__line"></div>
           <div class="way__title">
             We know <span class="way__title-green">the way</span><br />
             <p class="nowrap">to be on top</p>
@@ -72,37 +66,21 @@
 
       <div class="apps">
         <a name="apps"></a>
-        <div class="wrapper wrapper__apps">
-          <div class="slider-toolbar slider__padding">
-            <div class="slider-toolbar-left"></div>
-            <div class="slider-toolbar-right"></div>
-          </div>
-
-          <style>
-            .slick-slide {
-              margin-left: 17px;
-            }
-
-            .slick-list {
-              margin-left: -17px;
-            }
-          </style>
-
-          <div class="apps__slider slider multiple-items">
-            <div class="apps__slider-item apps__lower">
-              <div class="apps__item">
-                <div class="apps__item__screen">
-                  <div class="apps__item__screen-left">
-                    <div class="apps__item__screen-icon">
-                      <object class="app-screen" data="./assets/images/hd/icon_hd.svg" type="image/svg+xml"></object>
+        <div class="wrapper">
+          <div class="apps-sliders-composition">
+            <div class="apps__slider slider multiple-items keen-slider" id="apps-slider-top">
+              <div class="apps__item keen-slider__slide">
+                <div class="app-screen">
+                  <div class="app-screen__left">
+                    <div class="app-screen__icon">
+                      <object class="apps__logo" data="./assets/images/hd/icon_hd.svg" type="image/svg+xml"></object>
                     </div>
-                    <div class="apps__item__screen-title">
+                    <div class="app-screen__title">
                       <p>iOS &<br />Google Play</p>
                     </div>
                   </div>
-                  <div class="apps__item__screen-right">
-                    <div class="apps__item__screen-backimg backimg1"></div>
-                    <div class="apps__item__screen-frontimg frontimg1"></div>
+                  <div class="app-screen__right">
+                    <img class="app-screen__shots" src="./assets/images/hd/hd-screens-x2.png" alt="" />
                   </div>
                 </div>
                 <div class="apps__title">HD - Human Design App</div>
@@ -124,20 +102,16 @@
                   >
                 </div>
               </div>
-            </div>
-
-            <div class="apps__slider-item apps__lower">
-              <div class="apps__item">
-                <div class="apps__item__screen">
-                  <div class="apps__item__screen-left">
-                    <div class="apps__item__screen-icon">
-                      <object class="app-screen" data="./assets/images/pdf/icon_pdf.svg" type="image/svg+xml"></object>
+              <div class="apps__item keen-slider__slide">
+                <div class="app-screen">
+                  <div class="app-screen__left">
+                    <div class="app-screen__icon">
+                      <object class="apps__logo" data="./assets/images/pdf/icon_pdf.svg" type="image/svg+xml"></object>
                     </div>
-                    <div class="apps__item__screen-title"><p>Google Play</p></div>
+                    <div class="app-screen__title"><p>Google Play</p></div>
                   </div>
-                  <div class="apps__item__screen-right">
-                    <div class="apps__item__screen-backimg backimg2"></div>
-                    <div class="apps__item__screen-frontimg frontimg2"></div>
+                  <div class="app-screen__right">
+                    <img class="app-screen__shots" src="./assets/images/pdf/pdf-screenshots-x2.png" alt="" />
                   </div>
                 </div>
                 <div class="apps__title">PDF Converter App: img to pdf</div>
@@ -157,18 +131,14 @@
                   >
                 </div>
               </div>
-            </div>
-
-            <div class="apps__slider-item apps__lower">
-              <div class="apps__item">
-                <div class="apps__item__screen">
-                  <div class="apps__item__screen-left">
-                    <div class="apps__item__screen-icon"><img src="./assets/images/fax/fax-icon.png" /></div>
-                    <div class="apps__item__screen-title"><p>iOS</p></div>
+              <div class="apps__item keen-slider__slide">
+                <div class="app-screen">
+                  <div class="app-screen__left">
+                    <div class="app-screen__icon"><img src="./assets/images/fax/fax-icon.png" /></div>
+                    <div class="app-screen__title"><p class="ios-only">iOS</p></div>
                   </div>
-                  <div class="apps__item__screen-right">
-                    <div class="apps__item__screen-backimg backimg3"></div>
-                    <div class="apps__item__screen-frontimg frontimg3"></div>
+                  <div class="app-screen__right">
+                    <img class="app-screen__shots" src="./assets/images/fax/fax-screenshots-2x.png" alt="" />
                   </div>
                 </div>
                 <div class="apps__title">Fax App: Send Fax From Phone</div>
@@ -189,18 +159,14 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div class="apps__slider-item apps__lower">
-              <div class="apps__item">
-                <div class="apps__item__screen">
-                  <div class="apps__item__screen-left">
-                    <div class="apps__item__screen-icon"><img src="./assets/images/moon/moon-icon.png" /></div>
-                    <div class="apps__item__screen-title"><p>iOS</p></div>
+              <div class="apps__item keen-slider__slide">
+                <div class="app-screen">
+                  <div class="app-screen__left">
+                    <div class="app-screen__icon"><img src="./assets/images/moon/moon-icon.png" /></div>
+                    <div class="app-screen__title"><p class="ios-only">iOS</p></div>
                   </div>
-                  <div class="apps__item__screen-right">
-                    <div class="apps__item__screen-backimg backimg4"></div>
-                    <div class="apps__item__screen-frontimg frontimg4"></div>
+                  <div class="app-screen__right">
+                    <img class="app-screen__shots" src="./assets/images/moon/moon-screenshots-x2.png" alt="" />
                   </div>
                 </div>
                 <div class="apps__title">Moonlia: Moon Phases Calendar</div>
@@ -221,17 +187,14 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="apps__slider-item apps__lower">
-              <div class="apps__item">
-                <div class="apps__item__screen">
-                  <div class="apps__item__screen-left">
-                    <div class="apps__item__screen-icon"><img src="./assets/images/keyboard/keyboard-icon.png" /></div>
-                    <div class="apps__item__screen-title"><p>iOS</p></div>
+              <div class="apps__item keen-slider__slide">
+                <div class="app-screen">
+                  <div class="app-screen__left">
+                    <div class="app-screen__icon"><img src="./assets/images/keyboard/keyboard-icon.png" /></div>
+                    <div class="app-screen__title"><p class="ios-only">iOS</p></div>
                   </div>
-                  <div class="apps__item__screen-right">
-                    <div class="apps__item__screen-backimg backimg5"></div>
-                    <div class="apps__item__screen-frontimg frontimg5"></div>
+                  <div class="app-screen__right">
+                    <img class="app-screen__shots" src="./assets/images/keyboard/keyboard-screenshots-x2.png" alt="" />
                   </div>
                 </div>
                 <div class="apps__title">AI ChatBot Keyboard Assistant</div>
@@ -249,6 +212,170 @@
                   <div class="button button__apps">
                     <div class="button__text">Google Play</div>
                     <div class="button__arrow">→</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-toolbar">
+              <div class="slider-toolbar-left" id="apps-slider-left"></div>
+              <div class="slider-toolbar-right" id="apps-slider-right"></div>
+            </div>
+            <div class="apps__bottom-slider-wrapper">
+              <div class="apps__slider slider multiple-items keen-slider" id="apps-slider-bottom">
+                <div class="apps__item keen-slider__slide">
+                  <div class="app-screen">
+                    <div class="app-screen__left">
+                      <div class="app-screen__icon">
+                        <object class="apps__logo" data="./assets/images/hd/icon_hd.svg" type="image/svg+xml"></object>
+                      </div>
+                      <div class="app-screen__title">
+                        <p>iOS &<br />Google Play</p>
+                      </div>
+                    </div>
+                    <div class="app-screen__right">
+                      <img class="app-screen__shots" src="./assets/images/hd/hd-screens-x2.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="apps__title">HD - Human Design App</div>
+                  <div class="apps__text">
+                    The newest system to sync with the inner self and to improve the quality of life.
+                  </div>
+                  <div class="apps__buttons">
+                    <a href="https://apps.apple.com/us/app/id1582464555"
+                      ><div class="button button__apps">
+                        <div class="button__text">App Store</div>
+                        <div class="button__arrow">→</div>
+                      </div></a
+                    >
+                    <a href="https://play.google.com/store/apps/details?id=com.myhumandesignhd"
+                      ><div class="button button__apps">
+                        <div class="button__text">Google Play</div>
+                        <div class="button__arrow">→</div>
+                      </div></a
+                    >
+                  </div>
+                </div>
+                <div class="apps__item keen-slider__slide">
+                  <div class="app-screen">
+                    <div class="app-screen__left">
+                      <div class="app-screen__icon">
+                        <object
+                          class="apps__logo"
+                          data="./assets/images/pdf/icon_pdf.svg"
+                          type="image/svg+xml"
+                        ></object>
+                      </div>
+                      <div class="app-screen__title"><p>Google Play</p></div>
+                    </div>
+                    <div class="app-screen__right">
+                      <img class="app-screen__shots" src="./assets/images/pdf/pdf-screenshots-x2.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="apps__title">PDF Converter App: img to pdf</div>
+                  <div class="apps__text">
+                    Upload, convert and share documents of any format to PDF. It is fast, easy and secure!
+                  </div>
+                  <div class="apps__buttons">
+                    <div class="button button__apps">
+                      <div class="button__text">App Store</div>
+                      <div class="button__arrow">→</div>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.pdf.converter.image.to.pdf.doc.to.pdf"
+                      ><div class="button button__apps">
+                        <div class="button__text">Google Play</div>
+                        <div class="button__arrow">→</div>
+                      </div></a
+                    >
+                  </div>
+                </div>
+                <div class="apps__item keen-slider__slide">
+                  <div class="app-screen">
+                    <div class="app-screen__left">
+                      <div class="app-screen__icon"><img src="./assets/images/fax/fax-icon.png" /></div>
+                      <div class="app-screen__title"><p class="ios-only">iOS</p></div>
+                    </div>
+                    <div class="app-screen__right">
+                      <img class="app-screen__shots" src="./assets/images/fax/fax-screenshots-2x.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="apps__title">Fax App: Send Fax From Phone</div>
+                  <div class="apps__text">
+                    An easy and fast way to send faxes worldwide. Just upload any document or image and send fax on the
+                    go!
+                  </div>
+                  <div class="apps__buttons">
+                    <a href="https://apps.apple.com/us/app/id1622799610/id1622799610"
+                      ><div class="button button__apps">
+                        <div class="button__text">App Store</div>
+                        <div class="button__arrow">→</div>
+                      </div></a
+                    >
+                    <div class="button button__apps">
+                      <div class="button__text">Google Play</div>
+                      <div class="button__arrow">→</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="apps__item keen-slider__slide">
+                  <div class="app-screen">
+                    <div class="app-screen__left">
+                      <div class="app-screen__icon"><img src="./assets/images/moon/moon-icon.png" /></div>
+                      <div class="app-screen__title"><p class="ios-only">iOS</p></div>
+                    </div>
+                    <div class="app-screen__right">
+                      <img class="app-screen__shots" src="./assets/images/moon/moon-screenshots-x2.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="apps__title">Moonlia: Moon Phases Calendar</div>
+                  <div class="apps__text">
+                    Full moon guide for living in sync with the Moon rhythm and unlocking the gateway to personal
+                    transformation and positive changes.
+                  </div>
+                  <div class="apps__buttons">
+                    <a href="https://apps.apple.com/us/app/id1622799610/id1622799610"
+                      ><div class="button button__apps">
+                        <div class="button__text">App Store</div>
+                        <div class="button__arrow">→</div>
+                      </div></a
+                    >
+                    <div class="button button__apps">
+                      <div class="button__text">Google Play</div>
+                      <div class="button__arrow">→</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="apps__item keen-slider__slide">
+                  <div class="app-screen">
+                    <div class="app-screen__left">
+                      <div class="app-screen__icon">
+                        <img src="./assets/images/keyboard/keyboard-icon.png" />
+                      </div>
+                      <div class="app-screen__title"><p class="ios-only">iOS</p></div>
+                    </div>
+                    <div class="app-screen__right">
+                      <img
+                        class="app-screen__shots"
+                        src="./assets/images/keyboard/keyboard-screenshots-x2.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="apps__title">AI ChatBot Keyboard Assistant</div>
+                  <div class="apps__text">
+                    AI helper and keyboard assistant designed to enhance and streamline text-based conversations on
+                    mobile devices.
+                  </div>
+                  <div class="apps__buttons">
+                    <a href="https://apps.apple.com/us/app/id1622799610/id1622799610"
+                      ><div class="button button__apps">
+                        <div class="button__text">App Store</div>
+                        <div class="button__arrow">→</div>
+                      </div></a
+                    >
+                    <div class="button button__apps">
+                      <div class="button__text">Google Play</div>
+                      <div class="button__arrow">→</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -293,12 +420,11 @@
       <div class="world">
         <div class="wrapper wrapper__world">
           <div class="world__header">
-            <div class="world__title world__title-laptop">Our apps <br />are recognized <br />all over the world</div>
-            <div class="world__title world__title-tablet">
-              Our apps are <br />recognized <br />all over<br />
-              the world
-            </div>
-            <div class="world__title world__title-mobile">Our apps are <br />recognized all <br />over the world</div>
+            <h3 class="world__title">
+              Our apps<br class="laptop-only-br" />
+              are recognized<br class="tablet-only-br" /><br class="laptop-only-br" />
+              all over the world
+            </h3>
             <div class="world__text">
               Our audience is constantly growing. While initially focused on English-speaking regions, our product
               footprint has significantly expanded and will continue to reach a substantial part of the world in the
@@ -306,14 +432,15 @@
             </div>
           </div>
           <div class="world__map">
+            <img src="assets/images/world.svg" alt="world map" />
             <div class="world__stats">
               <div class="world__stats-item">
-                <div class="world__title world__title-higher">97%</div>
-                <div class="world__text-20">satisfied users</div>
+                <div class="world__stats-number">97%</div>
+                <div class="world__stats-text">satisfied users</div>
               </div>
               <div class="world__stats-item">
-                <div class="world__title world__title-higher">4.8</div>
-                <div class="world__text-20">average rating</div>
+                <div class="world__stats-number">4.8</div>
+                <div class="world__stats-text">average rating</div>
               </div>
             </div>
           </div>
@@ -322,86 +449,205 @@
 
       <div class="team">
         <div class="wrapper wrapper__team">
-          <div class="team__header">
-            <div>
-              <div class="team__title">Our team</div>
-              <div class="team__text">
-                We have a team of experienced product managers, developers, designers, analysts, and marketing
-                specialists who channel their collective expertise into crafting successful mobile applications.<br />Every
-                action we take is driven by purpose, and the values we share are the guiding principles we live by every
-                day.
-              </div>
+          <div class="team__title">Our team</div>
+          <div class="team__description">
+            <div class="team__text">
+              We have a team of experienced product managers, developers, designers, analysts, and marketing specialists
+              who channel their collective expertise into crafting successful mobile applications.<br />Every action we
+              take is driven by purpose, and the values we share are the guiding principles we live by every day.
             </div>
-            <div class="team__text-rigth">
-              <div class="team__text">
-                Work with Imiko Limited team is not only about gaining money. You become a part of the family, which
-                Working with the Imiko Limited team is more than just about earning money. It's about becoming part of a
-                family that shares knowledge and expertise to ensure your success. <br /><br />
-                If you're passionate about creating top-notch apps for users and contributing to their improved
-                lifestyle, you're welcome to join our team.
-              </div>
+            <div class="team__text">
+              Work with Imiko Limited team is not only about gaining money. You become a part of the family, which
+              Working with the Imiko Limited team is more than just about earning money. It's about becoming part of a
+              family that shares knowledge and expertise to ensure your success. <br /><br />
+              If you're passionate about creating top-notch apps for users and contributing to their improved lifestyle,
+              you're welcome to join our team.
             </div>
           </div>
 
-          <div class="slider-toolbar team__slider-laptop">
-            <div class="slider-toolbar-left slickleft"></div>
-            <div class="slider-toolbar-right slickright"></div>
-          </div>
+          <div class="team-sliders-composition">
+            <div class="slider-toolbar">
+              <div id="team-slider-left" class="slider-toolbar-left slickleft"></div>
+              <div id="team-slider-right" class="slider-toolbar-right slickright"></div>
+            </div>
 
-          <div class="team__slider">
-            <div class="team__slider-item team-items">
-              <div class="team__member member1 member-lower">
-                <p class="team__member__title">CEO<br />& Founder</p>
+            <div id="team-slider-top" class="team-slider keen-slider">
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member1">
+                    <p class="team__member__title">CEO<br />& Founder</p>
+                  </div>
+                  <div class="team__member member2">
+                    <p class="team__member__title">Head of<br />Operations</p>
+                  </div>
+                </div>
               </div>
-              <div class="team__member member2 member-lower">
-                <p class="team__member__title">Head of<br />Operations</p>
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member3">
+                    <p class="team__member__title">Head of iOS<br />Development</p>
+                  </div>
+                  <div class="team__member member4">
+                    <p class="team__member__title">Head of<br />Marketing</p>
+                  </div>
+                </div>
               </div>
-              <div class="team__member member3 member-lower">
-                <p class="team__member__title">Head of iOS<br />Development</p>
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member5">
+                    <p class="team__member__title">Project<br />Manager</p>
+                  </div>
+                  <div class="team__member member6">
+                    <p class="team__member__title">Product<br />Manager</p>
+                  </div>
+                </div>
               </div>
-              <div class="team__member member4 member-lower">
-                <p class="team__member__title">Head of<br />Marketing</p>
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member7">
+                    <p class="team__member__title">User Acquisition<br />Specialist</p>
+                  </div>
+                  <div class="team__member member8">
+                    <p class="team__member__title">ASO<br />Specialist</p>
+                  </div>
+                </div>
               </div>
-              <div class="team__member member5 member-lower">
-                <p class="team__member__title">Project<br />Manager</p>
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member9">
+                    <p class="team__member__title">Media Buyer</p>
+                  </div>
+                  <div class="team__member member10">
+                    <p class="team__member__title">Data Analyst</p>
+                  </div>
+                </div>
               </div>
-              <div class="team__member member6 member-lower">
-                <p class="team__member__title">Product<br />Manager</p>
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member11">
+                    <p class="team__member__title">iOS Developer</p>
+                  </div>
+                  <div class="team__member member12">
+                    <p class="team__member__title">Android<br />Developer</p>
+                  </div>
+                </div>
               </div>
-              <div class="team__member member7 member-lower">
-                <p class="team__member__title">User Acquisition<br />Specialist</p>
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member13">
+                    <p class="team__member__title">Back-end<br />Developer</p>
+                  </div>
+                  <div class="team__member member14">
+                    <p class="team__member__title">QA Engineer</p>
+                  </div>
+                </div>
               </div>
-              <div class="team__member member8 member-lower">
-                <p class="team__member__title">ASO<br />Specialist</p>
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member15">
+                    <p class="team__member__title">UX/UI Designer</p>
+                  </div>
+                  <div class="team__member member16">
+                    <p class="team__member__title">Motion Designer</p>
+                  </div>
+                </div>
               </div>
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member17">
+                    <p class="team__member__title">illustrator</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-              <div class="team__member member9 member-lower">
-                <p class="team__member__title">Media Buyer</p>
+            <div id="team-slider-bottom" class="team-slider keen-slider">
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member1">
+                    <p class="team__member__title">CEO<br />& Founder</p>
+                  </div>
+                  <div class="team__member member2">
+                    <p class="team__member__title">Head of<br />Operations</p>
+                  </div>
+                </div>
               </div>
-              <div class="team__member member10 member-lower">
-                <p class="team__member__title">Data Analyst</p>
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member3">
+                    <p class="team__member__title">Head of iOS<br />Development</p>
+                  </div>
+                  <div class="team__member member4">
+                    <p class="team__member__title">Head of<br />Marketing</p>
+                  </div>
+                </div>
               </div>
-              <div class="team__member member11 member-lower">
-                <p class="team__member__title">iOS Developer</p>
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member5">
+                    <p class="team__member__title">Project<br />Manager</p>
+                  </div>
+                  <div class="team__member member6">
+                    <p class="team__member__title">Product<br />Manager</p>
+                  </div>
+                </div>
               </div>
-              <div class="team__member member12 member-lower">
-                <p class="team__member__title">Android<br />Developer</p>
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member7">
+                    <p class="team__member__title">User Acquisition<br />Specialist</p>
+                  </div>
+                  <div class="team__member member8">
+                    <p class="team__member__title">ASO<br />Specialist</p>
+                  </div>
+                </div>
               </div>
-              <div class="team__member member13 member-lower">
-                <p class="team__member__title">Back-end<br />Developer</p>
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member9">
+                    <p class="team__member__title">Media Buyer</p>
+                  </div>
+                  <div class="team__member member10">
+                    <p class="team__member__title">Data Analyst</p>
+                  </div>
+                </div>
               </div>
-              <div class="team__member member14 member-lower">
-                <p class="team__member__title">QA Engineer</p>
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member11">
+                    <p class="team__member__title">iOS Developer</p>
+                  </div>
+                  <div class="team__member member12">
+                    <p class="team__member__title">Android<br />Developer</p>
+                  </div>
+                </div>
               </div>
-              <div class="team__member member15 member-lower">
-                <p class="team__member__title">UX/UI Designer</p>
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member13">
+                    <p class="team__member__title">Back-end<br />Developer</p>
+                  </div>
+                  <div class="team__member member14">
+                    <p class="team__member__title">QA Engineer</p>
+                  </div>
+                </div>
               </div>
-              <div class="team__member member16 member-lower">
-                <p class="team__member__title">Motion Designer</p>
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member15">
+                    <p class="team__member__title">UX/UI Designer</p>
+                  </div>
+                  <div class="team__member member16">
+                    <p class="team__member__title">Motion Designer</p>
+                  </div>
+                </div>
               </div>
-
-              <div class="team__member member17 member-lower">
-                <p class="team__member__title">illustrator</p>
+              <div class="keen-slider__slide">
+                <div class="team-slider__column">
+                  <div class="team__member member17">
+                    <p class="team__member__title">illustrator</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -436,21 +682,14 @@
           </div>
         </div>
       </div>
-
       <div class="map">
+        <div class="map__decoration-bg"></div>
         <div class="wrapper wrapper__map">
           <div id="map" class="map__googlemap"></div>
-          <div class="map__title map__title-laptop"><p>Get in touch with us</p></div>
-          <div class="map__title map__title-mobile">
-            <p>Get in touch <br />with us</p>
-          </div>
-          <div class="map__text map__text-laptop">
-            We are ready to transform even the most unreal ideas into reality with the most<br />
+          <p class="map__title">Get in touch with us</p>
+          <div class="map__text">
+            We are ready to transform even the most unreal ideas into reality with the most<br class="laptop-only-br tablet-only-br"/>
             talented people!
-          </div>
-          <div class="map__text map__text-mobile">
-            We are ready to transform even the most unreal<br />
-            ideas into reality with the most talented people!
           </div>
           <div class="button button__map" onclick="document.location='contact.html';">
             <div class="button__text">Contact us</div>
@@ -487,48 +726,7 @@
       }
       window.initMap = initMap;
     </script>
-
-    <script>
-      $('.multiple-items').slick({
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-
-        nextArrow: document.querySelector('.slider-toolbar-right'),
-        prevArrow: document.querySelector('.slider-toolbar-left'),
-        responsive: [
-          {
-            breakpoint: 1060,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              infinite: true,
-            },
-          },
-        ],
-      });
-    </script>
-
-    <script>
-      $('.team-items').slick({
-        rows: 2,
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-
-        nextArrow: document.querySelector('.slickright'),
-        prevArrow: document.querySelector('.slickleft'),
-        responsive: [
-          {
-            breakpoint: 743,
-            settings: {
-              rows: 2,
-              slidesToShow: 2,
-              slidesToScroll: 1,
-            },
-          },
-        ],
-      });
-    </script>
+    <script src="./assets/js/apps-slider.js" type="module"></script>
+    <script src="./assets/js/team-slider.js" type="module"></script>
   </body>
 </html>

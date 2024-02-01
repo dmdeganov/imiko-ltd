@@ -1,0 +1,18 @@
+.laptop-only-br {
+  display: none;
+  @include media-laptop {
+    display: block;
+  }
+}
+.tablet-only-br {
+  display: none;
+  @include media-laptop {
+    display: none;
+  }
+  @include media-tablet {
+    display: block;
+  }
+  @include media-mobile {
+    display: none;
+  }
+}

@@ -2,62 +2,36 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  @include media-laptop {
-    height: 626px;
-  }
-  @include media-tablet {
-    height: 625px;
-  }
-  @include media-mobile {
-    height: 547px;
+  padding: 120px 0 174px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  @media only screen and (max-width: 640px) {
+    padding: 96px 0 120px;
   }
 }
 
 .way {
   background: $color_black;
-  backdrop-filter: blur(12px);
-
-  &__line {
-    @include media-laptop {
-      width: 1040px;
-    }
-    @include media-tablet {
-      width: 100%;
-    }
-    @include media-mobile {
-      width: 327px;
-    }
-    height: 0px;
-    opacity: 0.2;
-    border: 1px solid $color_white;
-  }
 
   &__title {
     @include media-laptop {
-      padding-top: 120px;
       width: 696px;
       font-size: 8.4rem;
       line-height: 79px;
-      white-space: nowrap;
     }
     @include media-tablet {
-      padding-top: 120px;
-      width: 696px;
+      width: unset;
       font-size: 8.4rem;
       line-height: 79px;
-      white-space: nowrap;
     }
     @include media-mobile {
-      padding-top: 94px;
-      width: 288px;
+      //width: 288px;
       font-size: 4.8rem;
       line-height: 45.12px;
-      white-space: inherit;
     }
     font-family: Gilroy-Bold;
     font-weight: 700;
     letter-spacing: 0.3px;
-    color: $color_white;
+    color: $on-surface;
     &-green {
       color: $color_green;
       white-space: nowrap;
@@ -66,16 +40,17 @@
 
   &__text {
     padding-top: 24px;
-    color: $color_white;
+    color: $on-surface-70;
     line-height: 22.1px;
     @include media-laptop {
       width: 508px;
     }
     @include media-tablet {
-      width: 510px;
+      width: 508px;
+      //width: unset;
     }
     @include media-mobile {
-      width: 327px;
+      width: 100%;
     }
   }
 

@@ -8,8 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-forDeploy
-forDeploy.zip
+for-deploy
+for-deploy.zip
 dist
 dist-ssr
 *.local

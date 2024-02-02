@@ -62,12 +62,12 @@ function initializeTeamSliders() {
     created: () => {
       setTimeout(() => {
         transpileMouseEventsForDrag(teamSliderTop.container, teamSliderBottom.container);
-        // transpileTouchEventsForDrag(teamSliderTop.container, teamSliderBottom.container);
+        transpileTouchEventsForDrag(teamSliderTop.container, teamSliderBottom.container);
       }, 100);
 
       setTimeout(() => {
         transpileMouseEventsForDrag(teamSliderBottom.container, teamSliderTop.container);
-        // transpileTouchEventsForDrag(teamSliderBottom.container, teamSliderTop.container);
+        transpileTouchEventsForDrag(teamSliderBottom.container, teamSliderTop.container);
       }, 200);
     },
   });

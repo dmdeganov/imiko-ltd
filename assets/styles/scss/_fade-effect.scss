@@ -1,0 +1,31 @@
+.fade-effect {
+  visibility: hidden;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    //visibility: hidden;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    //visibility: visible;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-bottom-active {
+  0% {
+    transform: translateY(20vh);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

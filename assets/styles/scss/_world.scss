@@ -59,6 +59,8 @@
   }
 
   &__text {
+    animation-fill-mode: both;
+    animation-delay: 250ms;
     color: $on-surface-70;
     @include media-laptop {
       width: 508px;
@@ -103,17 +105,36 @@
 
   &__map {
     padding-top: 64px;
-    @include media-mobile {
-      padding-top: 48px;
+    svg {
+      width: 100%;
     }
     @include media-tablet {
       padding-left: 5%;
+      svg {
+        height: calc(50vw - 20px);
+      }
+    }
+    @include media-mobile {
+      padding-top: 48px;
+      padding-left: 0;
     }
     position: relative;
     width: 100%;
-    img {
-      width: 100%;
-      aspect-ratio: initial;
+  }
+}
+
+#world-map {
+  transform: unset !important;
+  opacity: 1 !important;
+  path {
+    transition: fill 1.5s cubic-bezier(0.885, 0.025, 0.75, 0.75);
+    path[fill='#E3FD52'] {
+      fill: #e3fd52;
     }
+  }
+}
+#world-map:not([style]) {
+  path[fill='#E3FD52'] {
+    fill: #484444;
   }
 }

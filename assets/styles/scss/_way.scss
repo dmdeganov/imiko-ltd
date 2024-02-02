@@ -9,10 +9,38 @@
   }
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(150%);
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
 .way {
   background: $color_black;
 
   &__title {
+    & > span,
+    & > p {
+      display: inline-block;
+      animation: fade-in 0.8s cubic-bezier(0.000, 0.000, 0.570, 0.890);
+      animation-fill-mode: both;
+    }
+    span:first-of-type {
+    }
+    span.way__title-green {
+      animation-delay: 300ms;
+    }
+    p:last-child {
+      animation-delay: 600ms;
+    }
     @include media-laptop {
       width: 696px;
       font-size: 8.4rem;
@@ -39,6 +67,9 @@
   }
 
   &__text {
+    animation: fade-in 0.8s cubic-bezier(0.000, 0.000, 0.570, 0.890);
+    animation-delay: 1000ms;
+    animation-fill-mode: both;
     padding-top: 24px;
     color: $on-surface-70;
     line-height: 22.1px;
@@ -60,6 +91,9 @@
 }
 
 .button__way {
+  animation: fade-in 0.8s cubic-bezier(0.000, 0.000, 0.570, 0.890);
+  animation-delay: 1200ms;
+  animation-fill-mode: both;
   width: 149px;
   background: $color_green;
   a {

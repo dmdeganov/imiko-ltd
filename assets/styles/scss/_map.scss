@@ -84,6 +84,11 @@
     }
   }
 
+  &__bottom{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
   &__text {
     padding-top: 24px;
     padding-bottom: 37px;

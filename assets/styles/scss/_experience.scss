@@ -37,6 +37,8 @@
   }
 
   &__text {
+    animation-delay: 250ms;
+    animation-fill-mode: both;
     @include media-laptop {
       width: 498px;
       padding-top: 14px;

@@ -8,7 +8,7 @@
   }
 
   @include media-tablet {
-    & > div{
+    & > div {
       flex-grow: 1;
     }
     padding: 120px 0;
@@ -18,6 +18,10 @@
   @include media-mobile {
     flex-direction: column;
     gap: 48px;
+  }
+  &-items {
+    animation-delay: 250ms;
+    animation-fill-mode: both;
   }
 }
 

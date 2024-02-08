@@ -2,6 +2,9 @@
   visibility: hidden;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
+  @media only screen and (max-width: 640px) {
+  animation-delay: 0ms !important;
+  }
 }
 
 @keyframes fade {
